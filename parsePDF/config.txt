@@ -1,0 +1,12 @@
+[file]
+filepath=E:\桌面\恶意提示加注\2增刊PDF
+# 下面两个参数没有用到
+write_excle_path=E:\桌面\恶意提示加注\2增刊PDF\out.xls
+write_excle_path_name=
+[database]
+host=100.11.8.143:1521/tmedms
+username=
+password=
+tmaas_host=100.11.8.143:1521/ctcs3e
+tmaas_username=
+tmaas_password=
