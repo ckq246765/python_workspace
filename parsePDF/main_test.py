@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# coding:utf8
+# coding:UTF-8
 # author:keqi time:2021/10/26
 
 import sys

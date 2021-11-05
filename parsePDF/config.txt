@@ -1,12 +1,47 @@
 [file]
 filepath=E:\桌面\恶意提示加注\2增刊PDF
+# 如若不配置该参数，默认图片存储路径：value(filepath)的同级目录\image
+imagepath=
+# 如若不配置该参数，处理后的PDF文件移动在路径：value(filepath)的同级目录\processedFile
+processedpath=
+
 # 下面两个参数没有用到
 write_excle_path=E:\桌面\恶意提示加注\2增刊PDF\out.xls
 write_excle_path_name=
+
 [database]
-host=100.11.8.143:1521/tmedms
-username=
-password=
+# 写入内网数据库
+tmedms_host=100.11.8.143:1521/tmedms
+tmedms_username=tmu_tmedms
+tmedms_password=tmedms143
+# 字典查询库,暂时不用
 tmaas_host=100.11.8.143:1521/ctcs3e
-tmaas_username=
-tmaas_password=
+tmaas_username=tmu_tmaas
+tmaas_password=tmaas143
+
+[ww-database]
+# 写入外网数据库
+tmedms_host=100.11.8.143:1521/tmedms
+tmedms_username=tmu_tmedms
+tmedms_password=tmedms143
+
+# 上传图片外网 Linux 服务器地址
+linux_ip=100.11.8.102
+linux_port=22
+linux_username=root
+linux_password=root1234
+linux_private_key=
+# linux_sftp_file_path=/data-app02/fastdfs/data/96/49
+# 上传到：/data-app02/fastdfs/data/96/49/1192/1.jpg
+# 数据库：/group2/M00/96/49/1192/1.jpg
+linux_sftp_file_path=/home/gage
+
+[dict]
+dict_key=集体/证明商标申请人名义地址/成员名单管理规则转让/移转公告:TMZRZJ,关于商标的处理决定撤销公告:TMQTCX,商标使用许可合同备案撤销公告:TMXKCX,商标其他事项公告:TMQTGG,变更集体/证明商标申请人名义地址/管理规则成员名单公告:TMBMZJ,商标其他注册事项变更公告:TMBQSQ,商标注册申请补正通知书送达公告:TMZBSD,商标申请补正通知书送达公告:TMSBSD,准予撤回商标注册申请决定书送达公告:TMZCSD,商标注册申请审查意见书送达公告:TMSYSD,商标注册申请驳回通知书送达公告:TMBTSD,提供注册商标使用证明通知书送达公告:TMTSSD,撤销注册商标决定书送达公告:TMCJSD,商标异议裁定书送达公告:TMYCSD,其他商标书件送达公告:TMQTSD,商标评审委员会驳回转让复审决定公告:TMBHZR,商标评审委员会驳回续展复审决定公告:TMBHXZ,商标评审委员会注册商标争议裁定公告:TMCXZY,商标评审委员会撤销注册不当商标申请议裁定公告:TMCXBD,商标评审委员会撤销注册商标复审决定公告:TMZFJD,商标评审委员会撤销注册不当商标复审决定公告:TMCXBC,商标评审委员会答辩通知书送达公告:TMDBSD,商标评审委员会裁(决)定通知书送达公告:TMCDSD,注册人死亡/终止注销注册商标公告:TMXWZX,注册人死亡/终止注销申请公告:TMXWSQ,国际商标公告:TMGJGG,商标局公告:TMSBJG,商标异议公告:TMYYSQ,商标异议裁定公告:TMYYCD,商标异议复审裁定公告:TMYFCD,共有人注册商标:TMZCGY,驰名商标公告:TMZCCM ,商标注册证无效公告:TMZCWX,通用公告:TMTYGG,商标代理机构业务事项公告:DLYWSX,商标初步审定公告:TMZCSQ,集体商标初步审定公告:TMJTSQ,证明商标初步审定公告:TMZMSQ,特殊标志登记公告:TMTCSQ,商标注册公告（一）:TMZCZC,商标注册公告（二）:TMQTZC,集体商标注册公告:TMJTZC,证明商标注册公告:TMZMZC,商标转让/移转公告:TMZRSQ,商标注册人/申请人名义及地址变更公告:TMBMSQ,商品/服务项目删减公告:TMSJSQ,变更商标代理机构公告:TMBGSQ,商标更正公告:TMGZSQ,注册商标续展公告:TMXZSQ,商标使用许可备案公告:TMXKSQ,商标使用许可变更公告:TMXKBG,商标使用许可终止公告:TMXKZZ,商标质权登记公告:TMZYSQ,商标质权登记事项变更公告:TMZYBG,商标质权登记期限延期公告:TMZYYQ,商标质权登记注销公告:TMZYZX,注册商标注销公告:TMZCZX,注册商标未续展注销公告:TMXZZX,注册商标撤销公告:TMCXSQ,注册商标宣告无效公告:TMXGWX,商标注册申请撤回公告:TMZCCH,无效公告:TMWXGG,商标注册证遗失声明公告:TMZCYS,商标代理机构合并公告:DLHBSQ,商标代理机构停止受理公告:DLTZSL,商标代理机构恢复受理公告:DLHFSL,商标代理机构注销备案/结算公告:DLZXBA,送达公告:TMSDGG,特殊标志注销公告:TMTBZX,特殊标志申请撤回公告:TMTBCH,集体/证明商标续展公告:TMZJXZ,集体/证明商标注销公告:TMZJZX
+
+# 取用那个数据库配置：database or ww-database
+# 默认 database
+[profile]
+# 内网 database
+# 外网 ww-database
+active=ww-database
