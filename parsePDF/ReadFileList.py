@@ -10,7 +10,7 @@ class ReadFileList(object):
     root_dir = os.path.dirname(os.path.abspath(sys.argv[0]))  # 获取当前文件所在目录的上一级目录，即项目所在目录E:\Crawler
     current_dir = os.path.abspath('.')  # 获取当前文件的绝对目录
     cf = configparser.ConfigParser()
-    cf.read(root_dir + "\\config.txt", "UTF-8")  # 拼接得到config.ini文件的路径，直接使用
+    cf.read(root_dir + os.sep +"config.txt", "UTF-8")  # 拼接得到config.ini文件的路径，直接使用
 
     # 记录第一个被创建对象的引用
     instance = None
@@ -62,7 +62,7 @@ class ReadFileList(object):
         fileList = []
         for i, j, k in os.walk(filePath):
             for fileName in k:
-                fileList.append(i + "\\" + fileName)
+                fileList.append(i + os.sep + fileName)
             print(i, j, k)
         return fileList
 
@@ -72,7 +72,7 @@ class ReadFileList(object):
         for i, j, k in os.walk(filePath):
             for fileName in k:
                 if fileName.endswith(file_type):
-                    fileList.append(i + "\\" + fileName)
+                    fileList.append(i + os.sep + fileName)
             print(i, j, k)
         return fileList
 
@@ -83,7 +83,7 @@ class ReadFileList(object):
         for i, j, k in os.walk(filePath):
             for fileName in k:
                 if fileName.endswith(type):
-                    fileList.append(i + "\\" + fileName)
+                    fileList.append(i + os.sep + fileName)
             print(i, j, k)
         print(fileList)
         return fileList
